@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inscrições - Junina Força Jovem</title>
+  <meta name="description" content="Formulário de inscrição para novos membros da Junina Força Jovem. Ano de fundação: 2016." />
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container" role="main">
+    <header>
+      <div>
+        <h1>Junina Força Jovem — Inscrições 2026</h1>
+        <p class="small">Venha fazer parte da nossa quadrilha! Preencha o formulário ao lado.</p>
+      </div>
+      <div class="small" aria-hidden="true">
+        <strong>Fundação:</strong> 2016
+      </div>
+    </header>
+
+    <!-- Coluna da esquerda: Informações e liderança -->
+    <section class="info" aria-labelledby="info-title">
+      <h2 id="info-title">Informações da Junina</h2>
+
+      <p class="muted">A Junina Força Jovem foi fundada em <strong>2016</strong>. Trabalhamos com preservação do folclore, dança e inclusão comunitária.</p>
+
+      <div class="leadership" aria-label="Membros da Comissão">
+        <div class="pos"><span><strong>Presidente</strong></span><span class="muted" id="presidente">— Matheus Sebastião</span></div>
+        <div class="pos"><span><strong>Vice-Presidente</strong></span><span class="muted" id="vice">— Erivelton Evangelista </span></div>
+        <div class="pos"><span><strong>Tesoureira</strong></span><span class="muted" id="tesoureira">— Ana Alice</span></div>
+        <div class="pos"><span><strong>Secretaria</strong></span><span class="muted" id="secretaria">— Ana Carla</span></div>
+        <div class="pos"><span><strong>Conselheira</strong></span><span class="muted" id="conselheira">— Alexandrina Carvalho</span></div>
+      </div>
+
+      <div class="partner" aria-labelledby="partner-title">
+        <h3 id="partner-title" style="margin:0;font-size:14px">Parceria</h3>
+        <p class="muted" style="margin:8px 0 0 0;">
+          Temos parceria com a <strong>OPA — Organização de Pesquisa e Prática em Artes Zé da Almerinda</strong>, para projetos de formação, pesquisa e apresentações culturais.
+        </p>
+      </div>
+
+      <div class="socials" aria-hidden="false" style="margin-top:12px;">
+        <!-- Instagram button (link pode ser atualizado) -->
+        <a class="btn btn--ig" href="https://instagram.com/juninaforcajovem26" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Junina Força Jovem">
+          <!-- simples ícone SVG do Instagram -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
+          </svg>
+          @juninaforcajovem
+        </a>
+      </div>
+
+      <p class="small" style="margin-top:12px;">Se quiser que atualizemos os nomes dos membros da gestão aqui no site, envie as informações e atualizamos rápido.</p>
+    </section>
+
+   <!-- Coluna da direita: Formulário -->
+<aside class="form-wrap" aria-labelledby="form-title">
+  <h2 id="form-title">Formulário de Inscrição — Novos Membros</h2>
+
+  <form id="inscricaoForm" action="#" method="post" novalidate>
+    <!-- Nome completo -->
+    <div>
+      <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+      <input id="nome" name="nome" type="text" placeholder="Seu nome completo" required autocomplete="name" />
+    </div>
+
+    <!-- Idade e Sexo -->
+    <div class="row">
+      <div>
+        <label for="idade">Idade <span aria-hidden="true">*</span></label>
+        <input id="idade" name="idade" type="number" min="4" max="120" placeholder="Ex: 23" required />
+      </div>
+      <div>
+        <label for="sexo">Sexo / Gênero</label>
+        <select id="sexo" name="sexo" aria-describedby="sexoHelp">
+          <option value="">Selecionar</option>
+          <option value="Feminino">Feminino</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Não-binário">Não-binário</option>
+          <option value="Outro">Outro</option>
+          <option value="Prefiro não dizer">Prefiro não dizer</option>
+        </select>
+        <div id="sexoHelp" class="small">Opcional — informação para organização de figurinos.</div>
+      </div>
+    </div>
+
+    <!-- Função: Apoio ou Brincante -->
+    <fieldset>
+      <legend style="font-size:13px;margin-bottom:8px">Selecione sua opção <span class="small">(Apoio ou Quadrilheiro)</span></legend>
+      <div class="radio-group" role="radiogroup" aria-labelledby="role-label">
+        <label><input type="radio" name="funcao" value="Brincante" required /> Quadrilheiro</label>
+        <label><input type="radio" name="funcao" value="Apoio" /> Apoio</label>
+      </div>
+    </fieldset>
+
+    <!-- Contato -->
+    <div>
+      <label for="contato">Contato (telefone ou email) <span aria-hidden="true">*</span></label>
+      <input id="contato" name="contato" type="text" placeholder="Telefone com DDD" required autocomplete="tel email" />
+      <div class="small">Exemplo: (71) 9 9999-9999 — utilize um número ativo, pois entraremos em contato por ele.</div>
+    </div>
+
+    <!-- Observações / Experiência -->
+    <div>
+      <label for="obs">Observações (Um pouco sobre você, experiência e disponibilidade.)</label>
+      <textarea id="obs" name="obs" rows="4" placeholder="Conte-nos um pouco sobre você..."></textarea>
+    </div>
+
+    <!-- Consentimento -->
+    <div>
+      <label><input type="checkbox" id="consent" name="consent" required /> Concordo em compartilhar os dados acima para fins de inscrição e contato pela Junina Força Jovem.</label>
+    </div>
+
+    <!-- Botão Enviar -->
+    <div>
+      <button type="submit" class="submit">Enviar inscrição</button>
+    </div>
+
+    <!-- Informação extra -->
+    <input type="hidden" name="fundacao" value="2016" />
+  </form>
+
+  <!-- Mensagem de status -->
+  <p id="mensagem" style="margin-top:15px;font-weight:600;"></p>
+</aside>
+
+      <p class="small" style="margin-top:8px;">Após o envio, entraremos em contato para confirmação e próximos passos.</p>
+    </aside>
+
+    <footer>
+      © Junina Força Jovem — Fundação 2016 · Parceria OPA — Organização de Pesquisa e Prática em Artes Zé da Almerinda
+    </footer>
+  </main>
+</body>
+<script src="script.js"></script>
+</html>
